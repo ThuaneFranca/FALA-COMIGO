@@ -10,12 +10,6 @@ Este aplicativo foi desenvolvido para auxiliar **crianças autistas não verbais
 - Layout voltado a crianças autistas
 
 
-## ✨ Funcionalidades
-
-- Comunicação por figuras (PECS)
-- Categorias: Emoções, Higiene, Alimentação, Rotinas, etc.
-- Interface simples e acessível
-- Layout voltado a crianças autistas
 
 
 ## 🚀 Tecnologias Utilizadas
