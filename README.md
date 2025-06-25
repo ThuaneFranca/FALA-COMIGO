@@ -1,50 +1,62 @@
-# Welcome to your Expo app 👋
+# 🧩 App Infantil PECS – Comunicação Alternativa
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este aplicativo foi desenvolvido para auxiliar **crianças autistas não verbais** a se comunicarem usando o sistema **PECS (Picture Exchange Communication System)**. O app apresenta imagens categorizadas com foco em acessibilidade e usabilidade infantil.
 
-## Get started
+## ✨ Funcionalidades
 
-1. Install dependencies
+- Comunicação por figuras (PECS)
+- Categorias: Emoções, Higiene, Alimentação, Rotinas, etc.
+- Interface simples e acessível
+- Layout voltado a crianças autistas
 
-   ```bash
-   npm install
-   ```
 
-2. Start the app
+## ✨ Funcionalidades
 
-   ```bash
-   npx expo start
-   ```
+- Comunicação por figuras (PECS)
+- Categorias: Emoções, Higiene, Alimentação, Rotinas, etc.
+- Interface simples e acessível
+- Layout voltado a crianças autistas
 
-In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🚀 Tecnologias Utilizadas
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- React Native
+- Expo
+- expo-router
+- StyleSheet modular
 
-## Get a fresh project
 
-When you're ready, run:
+## 🗂️ Estrutura de Pastas
 
-```bash
-npm run reset-project
-```
+\\\
+📁 app/              # Telas do app
+📁 assets/           # Imagens e ícones
+📁 styles/           # Estilos por tela
+📄 App.tsx           # Arquivo raiz do projeto
+\\\
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
+## ▶️ Como Rodar
 
-To learn more about developing your project with Expo, look at the following resources:
+1. Instale as dependências:
+\\\ash
+npm install
+\\\
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+2. Inicie o projeto:
+\\\ash
+npx expo start
+\\\
 
-## Join the community
+Use Expo Go ou um emulador Android/iOS.
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 👩‍💻 Autora
+
+**Thuane Mikaella**  
+Projeto com foco em acessibilidade e tecnologia inclusiva.
+
+## 📄 Licença
+
+Licenciado sob a licença MIT.
+
