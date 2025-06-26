@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router'; // Importa o roteador do Expo Router
 import React from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { alimentosStyles as styles } from '../styles/alimentos';
@@ -11,6 +12,7 @@ const categorias = [
 ];
 
 export default function Alimentos() {
+  const router = useRouter(); // Instancia o roteador
   return (
     <ScrollView contentContainerStyle={styles.container}>
       {/* Título com fundo azul */}
@@ -21,14 +23,29 @@ export default function Alimentos() {
       {/* Grid dos cards */}
       <View style={styles.grid}> 
         {categorias.map((item, index) => (
+          
+          
           <TouchableOpacity
             key={index}
             style={styles.card}
             onPress={() => {
               // Navegação futura para cada categoria
+              if (item.nome === 'COMIDA') {
+                router.push('/comidas'); // Navega para "COMIDAS"
+              }
+              else if (item.nome === 'BEBIDAS') {
+                router.push('/bebidas'); // Navega para "BEBIDAS"
+              }
+              else if (item.nome === 'DOCES') {
+                router.push('/doces'); // Navega para "DOCES"
+              }
+              else if (item.nome === 'FRUTAS') {
+                router.push('/frutas'); // Navega para "FRUTAS"
+              }
             }}
           >
-            <Image source={item.imagem} style={styles.cardImage} />
+
+            <Image source={item.imagem} style={styles.cardImage} /> 
             <Text style={styles.cardText}>{item.nome}</Text>
           </TouchableOpacity>
         ))}
