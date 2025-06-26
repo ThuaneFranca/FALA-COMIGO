@@ -8,7 +8,7 @@ const categorias = [
   { nome: 'SEDE', imagem: require('../assets/ICONES/EMOCOES/drink-water.png') },
   { nome: 'FELIZ', imagem: require('../assets/ICONES/EMOCOES/happy.png') },
   { nome: 'BRAVO', imagem: require('../assets/ICONES/EMOCOES/BRAVO.png') },
-  { nome: 'FOME', imagem: require('../assets/ICONES/EMOCOES/happy.png') },
+  { nome: 'FOME', imagem: require('../assets/ICONES/EMOCOES/hungry.png') },
   { nome: 'BARULHO', imagem: require('../assets/ICONES/EMOCOES/noisy.png') },
   { nome: 'DOR', imagem: require('../assets/ICONES/EMOCOES/headache.png') },
   { nome: 'SONO', imagem: require('../assets/ICONES/EMOCOES/tired.png') },

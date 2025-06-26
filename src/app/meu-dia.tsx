@@ -23,8 +23,10 @@ export default function MeuDia() {
         <Text style={styles.title}>MEU DIA</Text>
       </View>
 
+       {/* Grid dos cards */}
       <View style={styles.grid}>
         {categorias.map((item, index) => (
+          
           <TouchableOpacity
             key={index}
             style={[styles.card, { backgroundColor: item.cor }]}
@@ -53,8 +55,7 @@ export default function MeuDia() {
               else if (item.nome === 'ATIVIDADES') {
                 router.push('/atividades'); // 👈 Navega para "ATIVIDADES"
               }
-              
-
+            
              
               // Você pode adicionar outros ifs para navegar para "emoções", "alimentos" etc.
             }}

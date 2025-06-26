@@ -1,0 +1,65 @@
+import { StyleSheet } from 'react-native';
+
+export default StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#A6D3F2',
+    paddingTop: 50,
+    alignItems: 'center',
+  },
+  headerBox: {
+    width: 229,
+    height: 46,
+    backgroundColor: '#6ACBFF',
+    borderRadius: 82,
+    borderWidth: 1,
+    borderColor: '#3700DD',
+    shadowColor: 'rgba(0, 2, 98, 0.25)',
+    shadowOffset: { width: 4, height: 7 },
+    shadowRadius: 0,
+  },
+  title: {
+    marginTop: -40,
+    fontSize: 40,
+    fontFamily: 'Just Another Hand',
+    color: '#000',
+  },
+  card: {
+    width: 165,
+    height: 175,
+    backgroundColor: '#946EFF',
+    borderRadius: 50,
+    marginTop: 20,
+  },
+  image: {
+    width: 100,
+    height: 100,
+    marginTop: -150,
+  },
+  label: {
+    fontSize: 35,
+    fontFamily: 'Just Another Hand',
+    color: '#000',
+    textAlign: 'center',
+    marginTop: 5,
+  },
+  helpButton: {
+    marginTop: 30,
+    width: 118,
+    height: 40,
+    backgroundColor: '#6ACBFF',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#3700DD',
+    shadowColor: 'rgba(0, 2, 98, 1)',
+    shadowOffset: { width: 0, height: 4 },
+    shadowRadius: 7,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  helpText: {
+    fontSize: 29,
+    fontFamily: 'Just Another Hand',
+    color: '#000',
+  },
+});
