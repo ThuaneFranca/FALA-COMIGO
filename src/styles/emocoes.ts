@@ -13,32 +13,32 @@ export const emocoesStyles = StyleSheet.create({
   titleBackground: {
     width: 229,
     height: 46,
-    backgroundColor: 'rgba(106, 203, 255, 1)',  // azul igual Higiene
+    backgroundColor: '#6ACBFF',  // azul igual Higiene
     borderRadius: 82,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 20,
-    //shadowColor: 'rgba(0, 2, 98, 0.25)',       // sombra igual
-    shadowOffset: { width: 4, height: 7 },
+    marginBottom:50,
+    borderColor: '#3700DD', // borda azul escura
+    shadowColor: 'rgba(0, 2, 98, 0.25)',       // sombra igual
+    shadowOffset: { width: 4, height: 8 }, // sombra azul
     shadowRadius: 0,
     //borderWidth: 1,
-    borderColor: 'rgba(55, 0, 221, 1)',
   },
 
   // Texto do título
   title: {
-    fontSize: 40,
-    fontFamily: 'Just Another Hand',
+    fontSize: 30,
+    fontFamily: 'DeliusUnicase-Regular',
     color: '#000',
     textAlign: 'center',
   },
 
   // Grid para organizar os cards em várias linhas
   grid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    width: '100%',
+    flexDirection: 'row', // linha
+    flexWrap: 'wrap', // quebra de linha
+    justifyContent: 'space-around', // espaçamento entre os cards
+    width: '100%', // ocupa toda a largura
   },
 
   // Card individual, tamanho e estilo igual Higiene
@@ -61,8 +61,8 @@ export const emocoesStyles = StyleSheet.create({
 
   // Nome da categoria no card
   cardText: {
-    fontSize: 32,
-    fontFamily: 'Just Another Hand',
+    fontSize: 20,
+    fontFamily: 'DeliusUnicase-Regular',
     color: '#000',
     textAlign: 'center',
   },

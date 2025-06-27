@@ -1,42 +1,40 @@
 import React from 'react';
-import { ImageBackground, Text, View } from 'react-native';
+import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import styles from '../styles/bebidas';
 
 export default function Bebidas() {
+  // Lista de bebidas com nome e imagem
+  const bebidas = [
+    { nome: 'ÁGUA', imagem: require('../assets/ICONES/ALIMENTOS/bebidas/agua.png') },
+    { nome: 'SUCO', imagem: require('../assets/ICONES/ALIMENTOS/bebidas/juice-box.png') },
+    { nome: 'LEITE', imagem: require('../assets/ICONES/ALIMENTOS/bebidas/milk.png') },
+    { nome: 'ACHOCOLATADO', imagem: require('../assets/ICONES/ALIMENTOS/bebidas/chocolate-milk.png') },
+    { nome: 'REFRIGERANTE', imagem: require('../assets/ICONES/ALIMENTOS/bebidas/refrigerante.png') },
+    { nome: 'IORGUTE', imagem: require('../assets/ICONES/ALIMENTOS/bebidas/yogurt.png') },
+  ];
+
   return (
-    <View style={styles.container}>
-      <View style={styles.headerBox} />
-      <Text style={styles.title}>BEBIDAS</Text>
+    <ScrollView contentContainerStyle={{ flexGrow: 1 }} style={{ backgroundColor: '#A6D3F2' }}>
+      <View style={styles.container}>
+        {/* Cabeçalho arredondado */}
+        <View style={styles.headerBox} />
+        <Text style={styles.title}>BEBIDAS</Text>
 
-      <View style={styles.card} />
-      <ImageBackground style={styles.image} source={require('../assets/ICONES/ALIMENTOS/bebidas/drink.png')} />
-      <Text style={styles.label}>AGUA</Text>
+        {/* Grade com 2 colunas */}
+        <View style={styles.grid}>
+          {bebidas.map((item, index) => (
+            <View key={index} style={styles.card}>
+              <Image source={item.imagem} style={styles.image} />
+              <Text style={styles.label}>{item.nome}</Text>
+            </View>
+          ))}
+        </View>
 
-      <View style={styles.card} />
-      <ImageBackground style={styles.image}  source={require('../assets/ICONES/ALIMENTOS/bebidas/drink.png')} />
-      <Text style={styles.label}>SUCO</Text>
-
-      <View style={styles.card} />
-      <ImageBackground style={styles.image} source={require('../assets/ICONES/ALIMENTOS/bebidas/drink.png')} />
-      <Text style={styles.label}>LEITE</Text>
-
-      <View style={styles.card} />
-      <ImageBackground style={styles.image}  source={require('../assets/ICONES/ALIMENTOS/bebidas/drink.png')} />
-      <Text style={styles.label}>ACHOCOLATADO</Text>
-
-      <View style={styles.card} />
-      <ImageBackground style={styles.image} source={require('../assets/ICONES/ALIMENTOS/bebidas/drink.png')} />
-      <Text style={styles.label}>REFRIGENTE</Text>
-
-      <View style={styles.card} />
-      <ImageBackground style={styles.image}  source={require('../assets/ICONES/ALIMENTOS/bebidas/drink.png')} />
-      <Text style={styles.label}>IORGUTE</Text>
-
-      {/* Adicione os demais blocos similares para LEITE, ACHOCOLATADO, etc. */}
-
-      <View style={styles.helpButton}>
-        <Text style={styles.helpText}>AJUDA</Text>
+        {/* Botão de ajuda padrão */}
+        <TouchableOpacity style={styles.helpButton}>
+          <Text style={styles.helpText}>AJUDA</Text>
+        </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 }

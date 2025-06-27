@@ -1,14 +1,14 @@
 import { Dimensions, StyleSheet } from 'react-native';
 
-const { height } = Dimensions.get('window');
+const { height } = Dimensions.get('window'); // Altura da tela
 
 export const aprenderStyles = StyleSheet.create({
   // Container do ScrollView
   container: {
     backgroundColor: 'rgba(166, 211, 242, 1)',
     minHeight: height,
-    paddingTop: 50,
-    paddingBottom: 40,
+    paddingTop: 70, // Espaçamento superior
+    paddingBottom:30, // Espaçamento inferior
     alignItems: 'center',
   },
 
@@ -20,18 +20,18 @@ export const aprenderStyles = StyleSheet.create({
     borderRadius: 82,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 20,
+    marginBottom: 50,
     shadowColor: 'rgba(0, 2, 98, 0.25)',
-    shadowOffset: { width: 4, height: 7 },
+    shadowOffset: { width: 4, height: 8 },
     shadowRadius: 0,
-    borderWidth: 1,
+    //borderWidth: 1,
     borderColor: 'rgba(55, 0, 221, 1)',
   },
 
   // Texto do título
   title: {
-    fontSize: 40,
-    fontFamily: 'Just Another Hand',
+    fontSize: 30,
+    fontFamily: 'DeliusUnicase-Regular',
     color: '#000',
     textAlign: 'center',
   },
@@ -63,34 +63,34 @@ export const aprenderStyles = StyleSheet.create({
 
   // Imagem dentro do card
   cardImage: {
-    width: 100,
-    height: 100,
+    width: 70,
+    height: 70,
     marginBottom: 10,
     resizeMode: 'contain',
   },
 
   // Texto do card
   cardText: {
-    fontSize: 32,
-    fontFamily: 'Just Another Hand',
+    fontSize: 20,
+    fontFamily: 'DeliusUnicase-Regular',
     color: '#000',
     textAlign: 'center',
   },
 
   // Botão AJUDA (mesmo padrão)
   helpButton: {
-    marginTop: 30,
-    width: 118,
-    height: 40,
-    backgroundColor: 'rgba(106, 203, 255, 1)',
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: 'rgba(55, 0, 221, 1)',
-    shadowColor: 'rgba(0, 2, 98, 1)',
-    shadowOffset: { width: 0, height: 4 },
-    shadowRadius: 7,
-    alignSelf: 'center',
+    marginTop: 30, // Espaçamento acima do botão
+    width: 150, // Largura do botão
+    height: 50, // Altura do botão
+    backgroundColor: '#6ACBFF', // Cor de fundo do botão
+    borderRadius: 12, // Borda arredondada do botão
+    borderWidth: 1, // Borda do botão
+    borderColor: '#3700DD', // Cor da borda do botão
+    shadowColor: 'rgba(0, 2, 98, 1)', // Cor da sombra do botão
+    shadowOffset: { width: 0, height: 8 },// Deslocamento da sombra do botão
+    shadowRadius: 7,// Raio da sombra do botão
     justifyContent: 'center',
+    alignItems: 'center',
   },
 
   // Texto do botão AJUDA
