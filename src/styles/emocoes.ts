@@ -86,7 +86,7 @@ export const emocoesStyles = StyleSheet.create({
   // Texto do botão ajuda
   helpButtonText: {
     fontSize: 29,
-    fontFamily: 'Just Another Hand',
+    fontFamily: 'DeliusUnicase-Regular',
     color: '#000',
     textAlign: 'center',
     lineHeight: 40,
