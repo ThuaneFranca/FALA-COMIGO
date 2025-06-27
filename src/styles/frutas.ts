@@ -1,81 +1,77 @@
 import { StyleSheet } from 'react-native';
 
-export default StyleSheet.create({ // Estilos para a tela de Frutas
-  // Container principal da tela
+export default StyleSheet.create({
   container: {
     backgroundColor: '#A6D3F2',
-    paddingTop: 60, // Espaçamento superior
-    paddingBottom: 30, // Espaçamento inferior
-    paddingHorizontal: 20, // Espaçamento lateral
+    paddingTop: 70,
+    paddingBottom: 100, 
+    paddingHorizontal: 20,
     alignItems: 'center',
-    
   },
-  titulo: { // Título da tela
-    fontSize:30,
+  
+  titulo: { //titulo
+    fontSize: 30,
     fontFamily: 'DeliusUnicase-Regular',
-    color: '#000',
-    backgroundColor: '#6ACBFF',
-    borderRadius: 82,
-    borderColor: '#3700DD',
-    shadowColor: 'rgba(0, 2, 98, 0.25)',
-    shadowOffset: { width: 4, height: 8 },
+    textAlign: 'center',
+    marginBottom: 50,
+    backgroundColor: '#6ACBFF', 
+    borderColor: '#3700DD', // borda azul escura
+    shadowColor: 'rgba(0, 2, 98, 0.25)',       // sombra igual
+    shadowOffset: { width: 4, height: 8 }, // sombra azul
     shadowRadius: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 150, // Largura do título
-    height: 46, // Altura do título
-    textAlign: 'center', // Centraliza o texto
-  },
+    borderRadius: 82,
+    width: 229,
+    height: 46,
 
-  grid: { // Grid para organizar os itens
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    marginTop: 50,
-    gap: 20,
   },
-  item: { // Estilo de cada item no grid
-    width: 165,
+  grid: { 
+    flexDirection: 'row', // linha
+    flexWrap: 'wrap', // quebra de linha
+    justifyContent: 'space-around', // espaçamento entre os cards
+    width: '100%', // ocupa toda a largura
+  },
+  item: { //card
+    width: 165, 
     height: 175,
     backgroundColor: '#946EFF',
     borderRadius: 50,
-    justifyContent: 'center',
+    marginVertical: 15,
     alignItems: 'center',
-    margin: 10,
+    justifyContent: 'center',
   },
-  imagem: { // Ícone dentro do item
-    width: 70,
-    height: 70,
+  imagem: {
+    width:70,
+    height:70,
     marginBottom: 10,
   },
-  legenda: { // Texto dentro do item
+  
+  legenda: { 
     fontSize: 20,
     fontFamily: 'DeliusUnicase-Regular',
     color: '#000',
     textAlign: 'center',
   },
-  botaoAjuda: { // Botão de ajuda
-    marginTop: 30, // Espaçamento acima do botão
-    width: 150, // Largura do botão
-    height: 50, // Altura do botão
-    backgroundColor: '#6ACBFF', // Cor de fundo do botão
-    borderRadius: 12, // Borda arredondada do botão
-    borderWidth: 1, // Borda do botão
-    borderColor: '#3700DD', // Cor da borda do botão
-    shadowColor: 'rgba(0, 2, 98, 1)', // Cor da sombra do botão
-    shadowOffset: { width: 0, height: 8 },// Deslocamento da sombra do botão
-    shadowRadius: 7,// Raio da sombra do botão
+  botaoAjuda: {
+    marginTop: 20,
+    width: 118,
+    height: 40,
+    backgroundColor: 'rgba(106, 203, 255, 1)', // azul claro
+    borderRadius: 12,
+    borderWidth: 1,
+    //borderColor: 'rgba(55, 0, 221, 1)',        // borda azul escura
+    //shadowColor: 'rgba(0, 2, 98, 1)',           // sombra azul
+    shadowOffset: { width: 0, height: 4 },
+    shadowRadius: 7,
+    alignSelf: 'center',
     justifyContent: 'center',
-    alignItems: 'center',
   },
   textoAjuda: {
-    fontSize: 22,
-    fontFamily: 'deliusUnicase-Regular',
+     fontSize: 29,
+    fontFamily: 'DeliusUnicase-Regular',
     color: '#000',
+    textAlign: 'center',
+    lineHeight: 40,
+    
   },
- 
-  iconeVoltar: {
-    width: 40,
-    height: 40,
-  },
+
 });

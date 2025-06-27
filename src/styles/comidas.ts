@@ -45,8 +45,8 @@ export default StyleSheet.create({ // Estilos para a tela de Comidas
     
   },
   image: { // Imagem dentro do card
-    width: 80,
-    height: 80,
+    width: 70,
+    height: 70,
     resizeMode: 'contain',
   },
   label: { // Texto dentro do card
@@ -58,22 +58,23 @@ export default StyleSheet.create({ // Estilos para a tela de Comidas
   },
   ajudaButton: {
     // Botão de ajuda
-    marginTop: 30, // Espaçamento acima do botão
-    width: 200, // Largura do botão
-    height: 50, // Altura do botão
-    backgroundColor: '#6ACBFF', // Cor de fundo do botão
-    borderRadius: 12, // Borda arredondada do botão
-    borderWidth: 1, // Borda do botão
-    borderColor: '#3700DD',
-    shadowColor: 'rgba(0, 2, 98, 1)',
+    marginTop: 20,
+    width: 118,
+    height: 40,
+    backgroundColor: 'rgba(106, 203, 255, 1)', // azul claro
+    borderRadius: 12,
+    borderWidth: 1,
+    //borderColor: 'rgba(55, 0, 221, 1)',        // borda azul escura
+    //shadowColor: 'rgba(0, 2, 98, 1)',           // sombra azul
     shadowOffset: { width: 0, height: 4 },
     shadowRadius: 7,
+    alignSelf: 'center',
     justifyContent: 'center',
-    alignItems: 'center',
   },
   ajudaTexto: {
     fontSize: 30,
-    fontFamily: 'Just Another Hand',
+    fontFamily: 'DeliusUnicase-Regular',
     color: '#000',
+     textAlign: 'center',
   },
 });
