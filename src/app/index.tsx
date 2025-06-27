@@ -1,7 +1,8 @@
-import { useRouter } from 'expo-router'; // Import useRouter from expo-router
+import { useRouter } from 'expo-router'; // Hook de navegação
 import {
   Dimensions,
   Image,
+  ImageBackground,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -9,64 +10,102 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-const { width } = Dimensions.get('window');
 
-export default function HomeScreen() { // HomeScreen component
-  const router = useRouter();
+const { width } = Dimensions.get('window'); // Captura a largura da tela para responsividade
+
+export default function HomeScreen() {
+  const router = useRouter(); // Navegação entre telas
 
   return (
-    <SafeAreaView style={styles.container}> 
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <Text style={styles.title}>FALA COMIGO</Text>
+    // Imagem de fundo com nuvens (padrão visual mais acolhedor)
+    
+    <ImageBackground
+      source={require('../assets/LOGO/FUNDO.png')} // Substitua pela sua imagem real
+      style={styles.background}
+      resizeMode="cover" // Redimensiona a imagem para cobrir o fundo
+    >
+      <SafeAreaView style={styles.container}>
+        <ScrollView contentContainerStyle={styles.scrollView}>
+          
+          {/* Título estilizado com sombra e espaçamento */}
+          <Text style={styles.title}>FALA COMIGO</Text>
 
-        <Image // Display the logo image
-          source={require('../assets/LOGO/LOGO TRANSP.png')}
-          style={styles.logo}
-        />
+          {/* Logo centralizada */}
+          <Image
+            source={require('../assets/LOGO/LOGO TRANSP.png')}
+            style={styles.logo}
+          />
 
-        <TouchableOpacity // Button to navigate to "Meu Dia" screen
-          style={styles.button}
-          onPress={() => router.push('/meu-dia')}
-        >
-          <Text style={styles.buttonText}>ENTRAR</Text>
-        </TouchableOpacity>
-      </ScrollView>
-    </SafeAreaView>
+          {/* Botão de entrada com visual moderno e acessível */}
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push('/meu-dia')} // Navega para a tela Meu Dia
+          >
+            <Text style={styles.buttonText}>INICIAR</Text>
+          </TouchableOpacity>
+        </ScrollView>
+      </SafeAreaView>
+    </ImageBackground>
   );
 }
 
-const styles = StyleSheet.create({ // Styles for the HomeScreen component
-  container: { flex: 1, backgroundColor: '#FFFFFF' },
-  scrollView: {
-    flexGrow: 1,
-    backgroundColor: '#A6D3F2',
+
+
+
+
+// Estilos diretos com comentários
+const styles = StyleSheet.create({ 
+  background: {
+    flex: 1,
+    width: '100%',
+    height: '100%', // Ocupa toda a tela
+  },
+  container: { // Container principal com espaçamento e alinhamento
+    flex: 1,
+    backgroundColor: 'transparent', // Fundo transparente para mostrar a imagem
+  },
+  scrollView: { // Container do ScrollView com alinhamento central
+    flexGrow: 1, // Permite rolagem quando necessário
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 40,
+    paddingVertical: 40, // Espaçamento interno
   },
-  title: { // Title text style
-    fontFamily: 'Architects Daughter',
-    fontSize: 40,
+  title: { // Título (FALA COMIGO)
+    fontFamily: 'Flavors-Regular', // Fonte manuscrita amigável
+    fontSize: 80, // Tamanho grande para destaque
     textAlign: 'center',
-    marginBottom: 20,
-    color: '#2B2926',
+    marginBottom: 10, // Espaçamento abaixo do título
+    padding: 10, // Espaçamento interno
+    color: '#082588', // Cor escura e visível
+    textShadowColor: 'rgba(0, 0, 0, 0.30)', // Sombra discreta
+    textShadowOffset: { width:5, height: 8 }, // Deslocamento da sombra
+    textShadowRadius: 30, // Raio da sombra
+    letterSpacing: 2, // Espaço entre letras
   },
-  logo: { // Logo image style
-    width: width * 1.2,
+
+  logo: { // Logo centralizada com responsividade
+    width: width * 1.2, // Responsivo com base na tela
     height: width * 1.3,
     marginBottom: -60,
     resizeMode: 'contain',
   },
-  button: { // Button style
+
+  button: { // Botão de INICIAR com estilo moderno
     backgroundColor: '#6ACAFF',
     borderRadius: 82,
     paddingVertical: 20,
     paddingHorizontal: 38,
-    elevation: 8,
+    elevation: 8, // Sombra no Android
+    shadowColor: '#002162', // Sombra no iOS
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
   },
-  buttonText: { // Button text style
-    color: '#031246',
+  // Botão de INICIAR com estilo moderno
+  buttonText: { // Texto do botão com fonte grande e espaçamento
+    color: '#082588',
     fontSize: 30,
-    fontFamily: 'Racing Sans One',
+    fontFamily: 'Flavors-Regular', // Fonte moderna e legível
+    letterSpacing: 1, // Espaço entre letras
   },
 });

@@ -11,13 +11,14 @@ const categorias = [
   { nome: 'ANIMAIS', imagem: require('../assets/ICONES/ROTINAS/livestock.png'), cor: '#D4C29D' },
   { nome: 'APRENDER', imagem: require('../assets/ICONES/ROTINAS/education.png'), cor: '#EAF7B5' },
   { nome: 'ATIVIDADES', imagem: require('../assets/ICONES/ROTINAS/playtime (1).png'), cor: '#FFB6B6' },
-  { nome: 'CONFIGURAÇOES', imagem: require('../assets/ICONES/ROTINAS/gear.png'), cor: '#A6D3F2' },
+  { nome: 'CONFIGURAÇOES', imagem: require('../assets/ICONES/ROTINAS/gear.png'), cor: '#D3D3D3' },
 ];
 
 export default function MeuDia() {
   const router = useRouter(); // 👈 Instancia o roteador
 
   return (
+    
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.titleBackground}>
         <Text style={styles.title}>MEU DIA</Text>
@@ -55,6 +56,9 @@ export default function MeuDia() {
               else if (item.nome === 'ATIVIDADES') {
                 router.push('/atividades'); // 👈 Navega para "ATIVIDADES"
               }
+              else if (item.nome === 'CONFIGURAÇOES') {
+                router.push('/configuracoes'); // 👈 Navega para "CONFIGURAÇÕES"
+              }
             
              
               // Você pode adicionar outros ifs para navegar para "emoções", "alimentos" etc.
@@ -64,6 +68,7 @@ export default function MeuDia() {
             <Image source={item.imagem} style={styles.cardImage} />
             <Text style={styles.cardText}>{item.nome}</Text>
           </TouchableOpacity>
+          
         ))}
       </View>
     </ScrollView>

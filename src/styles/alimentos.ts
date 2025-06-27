@@ -27,8 +27,8 @@ export const alimentosStyles = StyleSheet.create({
   },
 
   title: { // Texto do título
-    fontSize: 35,
-    fontFamily: 'Just Another Hand',
+    fontSize: 30,
+    fontFamily: 'DeliusUnicase-Regular',
     color: '#000',
     textAlign: 'center',
   },
@@ -64,14 +64,14 @@ export const alimentosStyles = StyleSheet.create({
   },
 
   cardText: { // Texto dentro do card
-    fontSize: 32,
-    fontFamily: 'Just Another Hand',
+    fontSize: 20,
+    fontFamily: 'DeliusUnicase-Regular',
     color: '#000',
     textAlign: 'center',
   },
 
   helpButton: { // Botão de ajuda
-    marginTop: 20,
+    marginTop: 150, // espaçamento acima do botão
     width: 118,
     height: 40,
     backgroundColor: 'rgba(106, 203, 255, 1)',

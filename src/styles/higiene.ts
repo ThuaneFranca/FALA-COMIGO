@@ -1,74 +1,77 @@
 import { StyleSheet } from 'react-native';
 
-export default StyleSheet.create({
+export default StyleSheet.create({ // Estilos para a tela de Higiene
+  // Container principal da tela
   container: {
     flex: 1,
-    backgroundColor: '#A6D3F2',
     alignItems: 'center',
-    paddingTop: 70,
+    paddingTop: 70, // Espaçamento superior
+    paddingBottom: 30, // Espaçamento inferior
+    backgroundColor: '#A6D3F2',
   },
-  titleBackground: {
-  width: 229,
-  height: 46,
-  backgroundColor: '#6ACBFF',
-  borderRadius: 82,
-
-  // Centraliza o conteúdo dentro da View
-  alignItems: 'center',
-  justifyContent: 'center',
-
-  marginBottom: 60,
-},
-
-title: { // Estilo do título
-  fontSize: 40,
-  fontFamily: 'Just Another Hand',
-  color: '#000',
-  textAlign: 'center',  // centraliza texto
-},
-
-
-
-
-  row: {
+  titleBackground: { // Fundo azul arredondado atrás do título
+    width: 229,
+    height: 46,
+    backgroundColor: '#6ACBFF',
+    borderRadius: 82,
+    //borderWidth: 1,
+    borderColor: '#3700DD',
+    shadowColor: 'rgba(0, 2, 98, 0.25)',
+    shadowOffset: { width: 4, height: 8 },
+    shadowRadius: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: -40,
+  },
+  title: { // Texto do título
+    fontSize:30,
+    fontFamily: 'DeliusUnicase-Regular',
+    color: '#000',
+  },
+  grid: { // Grid para organizar os cards
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    width: '90%',
-    marginBottom: 30,
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    marginTop: 90,
+    gap: 20,
   },
   card: { // Card individual
-    width: 150,
-    height: 170,
-    backgroundColor: '#BD9DFA',
+    width: 165,
+    height: 175,
+    backgroundColor: '#946EFF',
     borderRadius: 50,
-    alignItems: 'center',
     justifyContent: 'center',
-    padding: 10,
+    alignItems: 'center',
+    margin: 10,
   },
   icon: { // Ícone dentro do card
-    width: 100,
-    height: 100,
+    width: 70,
+    height: 70,
     marginBottom: 10,
-    resizeMode: 'contain',
   },
-  cardText: { // Texto dentro doS cardS
-    fontSize: 22,
+  cardText: { // Texto dentro do card
+    fontSize: 20,
+    fontFamily: 'DeliusUnicase-Regular',
+    color: '#000',
     textAlign: 'center',
-    fontFamily: 'Just Another Hand',
-    
-    color: '#000',
   },
-  helpButton: { // Botão AJUDA
-    marginTop: 20,
-    backgroundColor: '#6ACBFF',
-    paddingHorizontal: 30,
-    paddingVertical: 10,
-    borderWidth: 1,
-    borderRadius: 12,
+  helpButton: { // Botão de ajuda
+    marginTop: 30, // Espaçamento acima do botão
+    width: 150, // Largura do botão
+    height: 50, // Altura do botão
+    backgroundColor: '#6ACBFF', // Cor de fundo do botão
+    borderRadius: 12, // Borda arredondada do botão
+    borderWidth: 1, // Borda do botão
+    borderColor: '#3700DD', // Cor da borda do botão
+    shadowColor: 'rgba(0, 2, 98, 1)', // Cor da sombra do botão
+    shadowOffset: { width: 0, height: 8 },// Deslocamento da sombra do botão
+    shadowRadius: 7,// Raio da sombra do botão
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  helpText: { // Texto dentro do botão AJUDA
-    fontSize: 25,
+  helpText: {
+    fontSize: 22,
+    fontFamily: 'deliusUnicase-Regular',
     color: '#000',
-    fontFamily: 'Just Another Hand',
   },
 });
